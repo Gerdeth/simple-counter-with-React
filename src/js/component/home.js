@@ -12,7 +12,7 @@ import "../../styles/index.scss";
 //create your first component
 let colors = ["purple", "blue", "orange", "yellow", "red", "green", "orange"];
 
-export function Home(props) {
+function Home(props) {
 	function ranColor() {
 		let index = Math.floor(Math.random() * colors.length);
 		let colOutput = colors[index];
@@ -21,18 +21,20 @@ export function Home(props) {
 	}
 	return (
 		<div className="text-center mt-5 d-flex clock-container }">
-			<div style={{ background: ranColor() }}>
+			<div style={{ color: ranColor() }}>
 				<FontAwesomeIcon icon={faClock} />
 			</div>
-			<div style={{ background: ranColor() }}>{props.char1}</div>
-			<div style={{ background: ranColor() }}>{props.char2}</div>
-			<div style={{ background: ranColor() }}>{props.char3}</div>
-			<div style={{ background: ranColor() }}>{props.char4}</div>
-			<div style={{ background: ranColor() }}>{props.char5}</div>
-			<div style={{ background: ranColor() }}>{props.char6}</div>
+			<div style={{ color: ranColor() }}>{props.char1}</div>
+			<div style={{ color: ranColor() }}>{props.char2}</div>
+			<div style={{ color: ranColor() }}>{props.char3}</div>
+			<div style={{ color: ranColor() }}>{props.char4}</div>
+			<div style={{ color: ranColor() }}>{props.char5}</div>
+			<div style={{ color: ranColor() }}>{props.char6}</div>
 		</div>
 	);
 }
+
+export default Home;
 Home.propTypes = {
 	char1: PropTypes.string,
 	char2: PropTypes.string,

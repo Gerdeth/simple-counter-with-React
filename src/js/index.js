@@ -9,7 +9,7 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import { Home2 } from "./component/home2.js";
 
 //render your react application
 var counter = 0;
@@ -21,7 +21,7 @@ var myTimer = () => {
 	seconds = seconds.slice(-6);
 
 	ReactDOM.render(
-		<Home
+		<Home2
 			char1={seconds.charAt(0)}
 			char2={seconds.charAt(1)}
 			char3={seconds.charAt(2)}
